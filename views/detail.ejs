@@ -1,0 +1,79 @@
+<section id="detail">
+  <div class="container" style="max-width: 900px">
+    <div class="row d-flex justify-content-center align-items-center m-5">
+      <div class="col text-center">
+        <h2><%= project1.projectName %></h2>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md me-3">
+        <img
+          src="/public/assets/img/<%= project1.formFile %> "
+          style="max-width: 500px; max-height: 300px"
+          alt="Image"
+        />
+      </div>
+      <div class="col-md">
+        <p class="fw-bold">Duration</p>
+        <div class="row d-flex">
+          <span
+            ><i class="fas fa-calendar-alt p-3"></i>
+            <%= project1.startDate%> - <%= project1.endDate%>
+          </span>
+
+          <span>
+            <i class="fas fa-hourglass-start p-3"></i>
+            <%= project1.monthDifferent%> month
+          </span>
+        </div>
+
+        <div class="row pt-3">
+          <p class="fw-bold">Technologies</p>
+          <div class="col d-flex">
+            <% if (project1.nextjs ==='nextjs') { %>
+            <span
+              class="iconify col-md"
+              data-icon="logos:nextjs"
+              style="color: rgba(0, 0, 0, 0)"
+              data-width="40"
+              data-height="40"
+            ></span>
+            <% } %> <% if (project1.reactjs === 'reactjs') { %>
+            <span
+              class="iconify col-md"
+              data-icon="vscode-icons:file-type-reactjs"
+              style="color: rgba(0, 0, 0, 0)"
+              data-width="40"
+              data-height="40"
+            ></span>
+            <% } %> <% if (project1.nodejs === 'nodejs') { %>
+
+            <span
+              class="iconify col-md"
+              data-icon="logos:nodejs"
+              style="color: rgba(0, 0, 0, 0)"
+              data-width="40"
+              data-height="40"
+            ></span>
+
+            <% } %> <% if (project1.typescript==='typescript') { %>
+            <span
+              class="iconify col-md"
+              data-icon="cib:typescript"
+              data-width="40"
+              data-height="40"
+            ></span>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col">
+        <p><%= project1.description%></p>
+      </div>
+    </div>
+  </div>
+</section>

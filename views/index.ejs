@@ -29,15 +29,14 @@
           </div>
         </div>
 
-        <div class="row mt-4">
-          <div class="col-md-3">
+        <div class="row mt-4 d-flex">
+          <div class="col-3">
             <button
               class="btn rounded-pill text-white pt-2 pb-2 ps-4 pe-4 text-decoration-none"
               style="background-color: black"
             >
               <a
-                href="/contact.html"
-                target="_blank"
+                href="/contact"
                 rel="noopener noreferrer"
                 class="text-decoration-none text-white"
               >
@@ -46,7 +45,7 @@
             </button>
           </div>
 
-          <div class="col-md">
+          <div class="col">
             <button class="btn" style="border: none">
               <a
                 class="download-icon text-black"
@@ -68,7 +67,7 @@
           </div>
 
           <div class="row mt-4">
-            <div class="col-md-1 mt-4 mb-4">
+            <div class="col-sm-1 mt-4 mb-4">
               <a
                 href="https://www.linkedin.com/in/ujang-pudin-bb8717220/"
                 target="_blank"
@@ -79,7 +78,7 @@
               ></a>
             </div>
 
-            <div class="col-md-1 mt-4 mb-4">
+            <div class="col-sm-1 mt-4 mb-4">
               <a
                 href="https://www.instagram.com/ujangpudin_up/"
                 target="_blank"
@@ -90,7 +89,7 @@
               ></a>
             </div>
 
-            <div class="col-md-1 mt-4 mb-4">
+            <div class="col-sm-1 mt-4 mb-4">
               <a
                 href="https://id-id.facebook.com/ujang.remenin"
                 target="_blank"
@@ -101,7 +100,7 @@
               ></a>
             </div>
 
-            <div class="col-md-1 mt-4 mb-4">
+            <div class="col-sm-1 mt-4 mb-4">
               <a href="https://twitter.com/Ujang_Pudin" target="_blank">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
@@ -112,7 +111,7 @@
         </div>
       </div>
 
-      <div class="col-md justify-content-center align-items-center d-flex">
+      <div class="col-sm justify-content-center align-items-center d-flex">
         <div class="card" style="max-width: 18rem; border-radius: 10px">
           <img
             src="/public/assets/img/profil.jpg"
@@ -138,94 +137,4 @@
 </div>
 <!-- Akhir Home -->
 
-<!-- Awal Card Project-->
-
-<section id="project">
-  <div class="container mt-5 mb-5">
-    <div class="row mb-3">
-      <div class="col-md">
-        <h3 class="text-center fw-bold">My Project</h3>
-      </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img
-            src="/public/assets/img/1.jpg"
-            class="card-img-top"
-            alt="img"
-            style="height: 250px"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <small class="text-muted">Last updated 3 mins ago</small>
-            <p class="mt-4" style="text-align: justify">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-          </div>
-
-          <div
-            class="row d-flex justify-content-center align-content-center text-center mb-4"
-          >
-            <div class="col-md">
-              <span
-                class="iconify"
-                data-icon="logos:nextjs"
-                style="color: rgba(0, 0, 0, 0)"
-                data-width="50"
-                data-height="50"
-              ></span>
-            </div>
-            <div class="col-md">
-              <span
-                class="iconify"
-                data-icon="vscode-icons:file-type-reactjs"
-                style="color: rgba(0, 0, 0, 0)"
-                data-width="50"
-                data-height="50"
-              ></span>
-            </div>
-            <div class="col-md">
-              <span
-                class="iconify"
-                data-icon="logos:nodejs"
-                style="color: rgba(0, 0, 0, 0)"
-                data-width="50"
-                data-height="50"
-              ></span>
-            </div>
-            <div class="col-md">
-              <span
-                class="iconify"
-                data-icon="cib:typescript"
-                data-width="45"
-                data-height="45"
-              ></span>
-            </div>
-          </div>
-
-          <div class="btn-group" role="group">
-            <button
-              type="button"
-              class="btn btn-primary rounded"
-              style="margin: auto 15px 2rem 1rem"
-            >
-              Left
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary rounded"
-              style="margin: auto 1rem 2rem 15px"
-            >
-              Right
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Alhir Card Project-->
+<%- include('card') %>

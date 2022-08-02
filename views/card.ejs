@@ -1,0 +1,130 @@
+<!-- Awal Card Project-->
+
+<section id="project">
+  <div class="container mt-5 mb-5">
+    <div class="row mb-3">
+      <div class="col-md">
+        <h3 class="text-center fw-bold">My Project</h3>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+      <!-- get Index -->
+
+      <% projects.forEach((project,index) => { %>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img
+            src="/public/assets/img/<%= project.formFile %> "
+            class="card-img-top"
+            alt="image"
+            style="height: 250px"
+          />
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex flex-row justify-content-between">
+              <h5 class="card-title"><%= project.projectName %></h5>
+              <a
+                href="/detail/<%= index %>"
+                class="btn btn-success rounded-pill"
+                >detail <i class="bi bi-info-circle-fill"></i
+              ></a>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <small class="text-muted"
+                  >Duration : <%= project.monthDifferent%> months</small
+                >
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <p class="mt-4" style="text-align: justify">
+                  <%= project.description %>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="row d-flex justify-content-center align-content-center text-center mb-4 ps-2 pe-2"
+          >
+            <!-- Next Js ICON -->
+
+            <% if (project.nextjs ==='nextjs') { %>
+            <div class="col-md-3">
+              <span
+                class="iconify"
+                data-icon="logos:nextjs"
+                style="color: rgba(0, 0, 0, 0)"
+                data-width="40"
+                data-height="40"
+              ></span>
+            </div>
+            <% } %>
+
+            <!-- reactJS Icon -->
+            <% if (project.reactjs === 'reactjs') { %>
+            <div class="col-md-3">
+              <span
+                class="iconify"
+                data-icon="vscode-icons:file-type-reactjs"
+                style="color: rgba(0, 0, 0, 0)"
+                data-width="40"
+                data-height="40"
+              ></span>
+            </div>
+            <% } %>
+
+            <!-- node JS ICON -->
+
+            <% if (project.nodejs === 'nodejs') { %>
+            <div class="col-md-3">
+              <span
+                class="iconify"
+                data-icon="logos:nodejs"
+                style="color: rgba(0, 0, 0, 0)"
+                data-width="40"
+                data-height="40"
+              ></span>
+            </div>
+            <% } %>
+
+            <!-- typescript icon -->
+            <% if (project.typescript==='typescript') { %>
+            <div class="col-md-3">
+              <span
+                class="iconify"
+                data-icon="cib:typescript"
+                data-width="40"
+                data-height="40"
+              ></span>
+            </div>
+            <% } %>
+          </div>
+
+          <div class="btn-group" role="group">
+            <a
+              href="/edit/<%= index %>"
+              class="btn btn-primary rounded"
+              style="margin: auto 15px 2rem 1rem; width: 40%"
+              >EDIT</a
+            >
+
+            <a
+              href="/delete/<%= index %>"
+              class="btn btn-primary rounded"
+              style="margin: auto 1rem 2rem 15px; width: 40%"
+            >
+              DELETE
+            </a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- Alhir Card Project-->

@@ -3,37 +3,34 @@
   class="form-container d-flex justify-content-center align-items-center"
   style="background-color: #cecdcd"
 >
-  <form class="form-container" action="/add-project" method="POST">
+  <form class="form-container" action="/addProject" method="POST">
     <h4 class="text-center m-3 fw-bold text-uppercase">Add My Project</h4>
-    <!-- <div class="mb-4"> -->
-    <label for="input-title" class="form-label">Project Name</label>
-    <input
-      type="text"
-      class="form-control"
-      id="input-title"
-      placeholder="Your Project Name"
-      name="projectName"
-    />
-    <!-- </div> -->
+    <div class="mb-4">
+      <label for="input-title" class="form-label">Project Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="input-title"
+        placeholder="Your Project Name"
+        name="projectName"
+      />
+    </div>
 
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mt-4">
       <div class="mb-4">
         <label for="startDate">Start Date</label>
         <input
           id="startDate"
-          class="form-control mt-1"
+          class="form-control date-input"
           type="date"
           name="startDate"
+          placeholder="dd/mm/yyyy"
+          data-date-format="dd/mm/yy"
         />
       </div>
       <div class="mb-4">
         <label for="endDate">End Date</label>
-        <input
-          id="endDate"
-          class="form-control mt-1"
-          type="date"
-          name="endDate"
-        />
+        <input id="endDate" class="form-control" type="date" name="endDate" />
       </div>
     </div>
 
@@ -48,7 +45,7 @@
     </div>
 
     <div class="mb-2">
-      <label class="form-check-label" for="nodeJs"> Technologies </label>
+      <label class="form-check-label" for="nodejs"> Technologies </label>
     </div>
 
     <div class="container">
@@ -57,24 +54,22 @@
           <input
             class="form-check-input"
             type="checkbox"
-            value=""
-            id="nodeJs"
-            name="checkboxInput"
-            value="nodeJs"
+            id="nodejs"
+            name="nodejs"
+            value="nodejs"
           />
-          <label class="form-check-label" for="nodeJs"> Node Js </label>
+          <label class="form-check-label" for="nodejs"> Node Js </label>
         </div>
 
         <div class="col-md-6 form-check">
           <input
             class="form-check-input"
             type="checkbox"
-            value=""
-            id="nextJs"
-            name="checkboxInput"
-            value="nextJs"
+            id="nextjs"
+            name="nextjs"
+            value="nextjs"
           />
-          <label class="form-check-label" for="nextJS"> Next Js </label>
+          <label class="form-check-label" for="nextjs"> Next Js </label>
         </div>
       </div>
 
@@ -83,31 +78,29 @@
           <input
             class="form-check-input"
             type="checkbox"
-            value=""
-            id="reactJs"
-            name="checkboxInput"
-            value="reactJs"
+            id="reactjs"
+            name="reactjs"
+            value="reactjs"
           />
-          <label class="form-check-label" for="reactJs"> React Js </label>
+          <label class="form-check-label" for="reactjs"> React Js </label>
         </div>
 
         <div class="col-md-6 form-check mb-4">
           <input
             class="form-check-input"
             type="checkbox"
-            value=""
-            id="typeScript"
-            name="checkboxInput"
-            value="typeScript"
+            id="typescript"
+            name="typescript"
+            value="typescript"
           />
-          <label class="form-check-label" for="typeScript">TypeScript </label>
+          <label class="form-check-label" for="typescript">TypeScript </label>
         </div>
       </div>
     </div>
 
     <div class="mb-4">
       <label for="formFile" class="form-label">Upload Image</label>
-      <input class="form-control" type="file" id="formFile" />
+      <input class="form-control" type="file" id="formFile" name="formFile" />
     </div>
 
     <div class="d-flex justify-content-end mb-3 mt-3">
@@ -121,4 +114,5 @@
     </div>
   </form>
 </div>
-<!-- Akhir Form contact -->
+
+<!-- Akhir Form  -->
