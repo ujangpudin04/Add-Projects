@@ -13,6 +13,7 @@
         id="input-title"
         placeholder="Your Project Name"
         name="projectName"
+        required
       />
     </div>
 
@@ -24,13 +25,12 @@
           class="form-control date-input"
           type="date"
           name="startDate"
-          placeholder="dd/mm/yyyy"
-          data-date-format="dd/mm/yy"
+          required
         />
       </div>
       <div class="mb-4">
         <label for="endDate">End Date</label>
-        <input id="endDate" class="form-control" type="date" name="endDate" />
+        <input id="endDate" class="form-control" type="date" name="endDate" required/>
       </div>
     </div>
 
@@ -41,6 +41,7 @@
         id="input-description"
         rows="2"
         name="description"
+        required
       ></textarea>
     </div>
 
@@ -100,7 +101,7 @@
 
     <div class="mb-4">
       <label for="formFile" class="form-label">Upload Image</label>
-      <input class="form-control" type="file" id="formFile" name="formFile" />
+      <input class="form-control" type="file" id="formFile" name="formFile" required/>
     </div>
 
     <div class="d-flex justify-content-end mb-3 mt-3">

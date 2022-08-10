@@ -75,22 +75,9 @@ app.post("/edit/update/:index", (req, res) => {
     new Date(data.startDate)
   );
   // data lama
-  console.log("---data lama---");
-  console.log(projects);
-  console.log("---lama-----");
-
   console.log("---data baru---");
   projects.splice(data.id, 1, data);
-
   console.log("---data baru---");
-
-  // const dataPush = projects.map((project) => {
-  //   const newProject = {
-  //     ...project,
-  //     id: data.id,
-  //   };
-  //   return newProject;
-  // });
   res.redirect("/");
 });
 
@@ -107,12 +94,12 @@ app.get("/edit/:index", (req, res) => {
 
   const projectEdit = project[id];
 
-  console.log("------edit-----");
+  // console.log("------edit-----");
   // console.log(project);
   // const result = project.find(({ id }) => id === id);
   // console.log(project.description);
   // console.log(projectEdit);
-  console.log("------edit-----");
+  // console.log("------edit-----");
 
   res.render("edit", {
     title: "Edit Project",
@@ -134,11 +121,9 @@ app.get("/contact", (req, res) => {
     title: "contact",
     layout: "layouts/main-layout",
   });
-
-  res.redirect("/");
 });
 
-app.post("/contact", (err, req, res, next) => {
+app.post("/contact/post", (req, res) => {
   res.redirect("/");
 });
 

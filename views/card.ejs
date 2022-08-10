@@ -3,16 +3,24 @@
 <section id="project">
   <div class="container mt-5 mb-5">
     <div class="row mb-3">
-      <div class="col-md">
+      <div class="col-sm d-flex justify-content-center">
         <h3 class="text-center fw-bold">My Project</h3>
       </div>
-    </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+      <div class="col-sm d-flex justify-content-center ">
+        <a href="./addProject" class="text-decoration-none text-white bg-primary p-2 pe-3 ps-3 rounded-pill">Add Project</a>
+     </div>
+    </div>
+  
+
+
+
+
+    <div class="row row-cols-1 row-cols-md-3 row-cols-sm-6 g-4 mt-2 d-flex justify-content-center align-items-center">
       <!-- get Index -->
 
       <% projects.forEach((project,index) => { %>
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6 col-sm-9 col-9">
         <div class="card h-100">
           <img
             src="/public/assets/img/<%= project.formFile %> "
@@ -48,12 +56,12 @@
           </div>
 
           <div
-            class="row d-flex justify-content-center align-content-center text-center mb-4 ps-2 pe-2"
+            class="row d-flex justify-content-center align-content-center text-center mb-4 ps-2 pe-2 "
           >
             <!-- Next Js ICON -->
 
             <% if (project.nextjs ==='nextjs') { %>
-            <div class="col-md-3">
+            <div class="col-sm-3 col-3">
               <span
                 class="iconify"
                 data-icon="logos:nextjs"
@@ -66,7 +74,7 @@
 
             <!-- reactJS Icon -->
             <% if (project.reactjs === 'reactjs') { %>
-            <div class="col-md-3">
+            <div class="col-sm-3 col-3">
               <span
                 class="iconify"
                 data-icon="vscode-icons:file-type-reactjs"
@@ -80,7 +88,7 @@
             <!-- node JS ICON -->
 
             <% if (project.nodejs === 'nodejs') { %>
-            <div class="col-md-3">
+            <div class="col-sm-3 col-3">
               <span
                 class="iconify"
                 data-icon="logos:nodejs"
@@ -93,7 +101,7 @@
 
             <!-- typescript icon -->
             <% if (project.typescript==='typescript') { %>
-            <div class="col-md-3">
+            <div class="col-sm-3 col-3">
               <span
                 class="iconify"
                 data-icon="cib:typescript"
